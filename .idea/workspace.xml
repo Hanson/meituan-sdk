@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="403182ad-1d4a-4a34-892f-762a6b6cbfff" name="Default" comment="Add Waimai as the first module">
+    <list default="true" id="403182ad-1d4a-4a34-892f-762a6b6cbfff" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -285,7 +285,7 @@
       <workItem from="1497438211650" duration="13655000" />
       <workItem from="1497534964541" duration="1707000" />
       <workItem from="1497921209845" duration="4204000" />
-      <workItem from="1497925453630" duration="284000" />
+      <workItem from="1497925453630" duration="360000" />
     </task>
     <task id="LOCAL-00001" summary="Add Waimai as the first module">
       <created>1497925635584</created>
@@ -294,11 +294,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497925635584</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="delete .idea">
+      <created>1497925747851</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1497925747851</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41705000" />
+    <option name="totallyTimeSpent" value="41781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -359,7 +366,8 @@
       <path value="$PROJECT_DIR$/foundation" />
     </ignored-roots>
     <MESSAGE value="Add Waimai as the first module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Waimai as the first module" />
+    <MESSAGE value="delete .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete .idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
