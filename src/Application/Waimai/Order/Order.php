@@ -1,6 +1,6 @@
 <?php
 
-namespace Hanson\Meituan\Application\Order;
+namespace Hanson\Meituan\Application\Waimai\Order;
 
 use Hanson\Meituan\Core\Api;
 

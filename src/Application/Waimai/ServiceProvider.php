@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Hanson\Meituan\Application\Dish;
+namespace Hanson\Meituan\Application\Waimai;
 
 
 use Pimple\Container;
@@ -20,8 +20,8 @@ class ServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $pimple)
     {
-        $pimple['dish'] = function ($pimple) {
-            return new Order($pimple['access_token']);
+        $pimple['waimai'] = function ($pimple) {
+            return new Waimai($pimple['access_token']);
         };
     }
 }

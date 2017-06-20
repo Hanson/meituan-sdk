@@ -1,3 +1,5 @@
+.idea
+/demo/
 composer.phar
 /vendor/
 

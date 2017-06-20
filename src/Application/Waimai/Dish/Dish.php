@@ -1,6 +1,6 @@
 <?php
 
-namespace Hanson\Meituan\Application\Dish;
+namespace Hanson\Meituan\Application\Waimai\Dish;
 
 use Hanson\Meituan\Core\Api;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hanson\Meituan\Application\Poi;
+namespace Hanson\Meituan\Application\Waimai\Poi;
 
 use Hanson\Meituan\Core\Api;
 

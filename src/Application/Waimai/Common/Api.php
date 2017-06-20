@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Hanson\Meituan\Application\Common;
+namespace Hanson\Meituan\Application\Waimai\Common;
 
 
 use Hanson\Foundation\AbstractAPI;

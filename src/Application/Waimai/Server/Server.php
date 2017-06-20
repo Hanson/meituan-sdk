@@ -1,6 +1,6 @@
 <?php
 
-namespace Hanson\Meituan\Application\Server;
+namespace Hanson\Meituan\Application\Waimai\Server;
 
 use function GuzzleHttp\Psr7\parse_query;
 use Hanson\Foundation\Log;
