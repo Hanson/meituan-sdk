@@ -1,4 +1,4 @@
-.idea
+/.idea/
 /demo/
 composer.phar
 /vendor/
