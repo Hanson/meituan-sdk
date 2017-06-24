@@ -12,7 +12,8 @@ use Hanson\Meituan\Application;
  * @package Hanson\Meituan
  *
  * @property \Hanson\Meituan\AccessToken\AccessToken    $access_token
- * @property \Hanson\Meituan\Application\Waimai\Waimai    $waimai
+ * @property \Hanson\Meituan\Application\Waimai\Waimai  $waimai
+ * @property \Hanson\Meituan\Application\Store\Store    $store
  */
 class Meituan extends Foundation
 {
@@ -20,6 +21,7 @@ class Meituan extends Foundation
     protected $providers = [
         AccessToken\ServiceProvider::class,
         Application\Waimai\ServiceProvider::class,
+        Application\Store\ServiceProvider::class,
     ];
 
     public function createAuthorizer($authToken)

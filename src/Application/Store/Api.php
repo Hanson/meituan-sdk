@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Hanson\Meituan\Application\Waimai\Common;
+namespace Hanson\Meituan\Application\Store;
 
 
 use Hanson\Foundation\AbstractAPI;
@@ -44,8 +44,6 @@ class Api extends AbstractAPI
         ]);
 
         $response = call_user_func_array([$http, $method], [$url, $params]);
-
-        print_r($response);
 
         return json_decode($response, true);
     }

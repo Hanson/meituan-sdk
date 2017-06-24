@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Hanson\Meituan\Application\Waimai\Common;
+namespace Hanson\Meituan\Application\Store;
 
 
 use Pimple\Container;

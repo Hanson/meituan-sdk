@@ -1,10 +1,9 @@
 <?php
 
-namespace Hanson\Meituan\Application\Waimai\Common;
+namespace Hanson\Meituan\Application\Store;
+
 
 use function GuzzleHttp\Psr7\parse_query;
-use Hanson\Foundation\Log;
-use Hanson\Meituan\Core\Api;
 
 class Store extends Api
 {
@@ -39,6 +38,18 @@ class Store extends Api
         $url = $this->getMapUrl($params);
 
         header('Location:'.$url);
+    }
+
+    /**
+     * 门店映射回调
+     *
+     * @return array
+     */
+    public function callback()
+    {
+        $content = file_get_contents('php://input');
+
+        return parse_query($content);
     }
 
 }

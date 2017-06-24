@@ -20,8 +20,6 @@ class Server extends Api
 
         $content = file_get_contents('php://input');
 
-        Log::debug('Get params: '.$content);
-
         return parse_query($content);
     }
 }
