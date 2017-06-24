@@ -9,6 +9,7 @@ class Store extends Api
 {
 
     const STORE_MAP_API = 'https://open-erp.meituan.com/storemap';
+    const RELEASE_BINDING_API = 'https://open-erp.meituan.com/releasebinding';
 
     /**
      * 门店映射接入
@@ -16,7 +17,7 @@ class Store extends Api
      * @param $params
      * @return string
      */
-    public function getMapUrl($params)
+    public function getAuthorizeUrl($params)
     {
         $params['callbackUrl'] = urlencode($params['callbackUrl']);
 
@@ -33,9 +34,9 @@ class Store extends Api
      *
      * @param $params
      */
-    public function toMap($params)
+    public function authorize($params)
     {
-        $url = $this->getMapUrl($params);
+        $url = $this->getAuthorizeUrl($params);
 
         header('Location:'.$url);
     }
@@ -50,6 +51,23 @@ class Store extends Api
         $content = file_get_contents('php://input');
 
         return parse_query($content);
+    }
+
+    /**
+     * 获取解除绑定链接.
+     *
+     * @param $businessId
+     * @return string
+     */
+    public function getUnbindUrl($businessId)
+    {
+        $params = [
+            'businessId' => $businessId,
+            'appAuthToken' => $this->accessToken->getAuthToken(),
+            'signKey' => $this->accessToken->getSignKey(),
+        ];
+
+        return self::RELEASE_BINDING_API.'?'.http_build_query($params);
     }
 
 }
