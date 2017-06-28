@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "hanson/foundation-sdk": "dev-master"
+        "hanson/foundation-sdk": "^1.0"
     },
     "autoload": {
         "psr-4": {
