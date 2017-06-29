@@ -41,31 +41,12 @@ class Api extends AbstractAPI
             'timestamp' => time(),
         ]);
 
-        $params['sign'] = $this->signature($params);
+        $params['sign'] = $this->accessToken->signature($params);
 
         /** @var ResponseInterface $response */
         $response = call_user_func_array([$http, $method], [$url, $params, $files]);
 
         return json_decode(strval($response->getBody()), true);
-    }
-
-    /**
-     * 数字签名.
-     *
-     * @param $params
-     * @return string
-     */
-    public function signature($params)
-    {
-        $result = $this->accessToken->getSignKey();
-
-        ksort($params);
-
-        foreach ($params as $key => $param) {
-            $result .= $key.$param;
-        }
-
-        return strtolower(sha1($result));
     }
 
     /**

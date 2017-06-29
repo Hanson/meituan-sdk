@@ -13,6 +13,7 @@ class Order extends Api
     const CANCEL_API = 'http://api.open.cater.meituan.com/waimai/order/cancel';
     const DELIVERING_API = 'http://api.open.cater.meituan.com/waimai/order/delivering';
     const DELIVERED_API = 'http://api.open.cater.meituan.com/waimai/order/delivered';
+    const QUERY_ZB_SHIPPING_FEE_API = 'http://api.open.cater.meituan.com/waimai/order/queryZbShippingFee';
     const PREPARE_DISPATCH_API = 'http://api.open.cater.meituan.com/waimai/order/prepareZbDispatch';
     const UPDATE_DISPATCH_TIP_API = 'http://api.open.cater.meituan.com/waimai/order/updateZbDispatchTip';
     const CONFIRM_DISPATCH_API = 'http://api.open.cater.meituan.com/waimai/order/confirmZbDispatch';
@@ -86,6 +87,17 @@ class Order extends Api
     public function delivered($orderId)
     {
         return $this->request('post', [self::DELIVERED_API, ['orderId' => $orderId]]);
+    }
+
+    /**
+     * 众包配送场景－查询配送费
+     *
+     * @param $orderIds
+     * @return array
+     */
+    public function queryShippingFee($orderIds)
+    {
+        return $this->request('post', [self::QUERY_ZB_SHIPPING_FEE_API, ['orderIds' => $orderIds]]);
     }
 
     /**

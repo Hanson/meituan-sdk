@@ -30,6 +30,25 @@ class AccessToken extends AbstractAccessToken
     {
         return $this->authToken;
     }
+
+    /**
+     * 数字签名.
+     *
+     * @param $params
+     * @return string
+     */
+    public function signature($params)
+    {
+        $result = $this->getSignKey();
+
+        ksort($params);
+
+        foreach ($params as $key => $param) {
+            $result .= $key.$param;
+        }
+
+        return strtolower(sha1($result));
+    }
     
     /**
      * Get token from remote server.
