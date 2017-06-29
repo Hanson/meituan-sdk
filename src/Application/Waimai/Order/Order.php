@@ -97,7 +97,7 @@ class Order extends Api
      */
     public function queryZbShippingFee($orderIds)
     {
-        return $this->request('post', [self::QUERY_ZB_SHIPPING_FEE_API, ['orderIds' => $orderIds]]);
+        return $this->request('get', [self::QUERY_ZB_SHIPPING_FEE_API, ['orderIds' => $orderIds]]);
     }
 
     /**
