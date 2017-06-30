@@ -21,6 +21,7 @@ class Dish extends Api
     const DELETE_SKU_API = 'http://api.open.cater.meituan.com/waimai/dish/deleteSku';
     const DELETE_CAT_API = 'http://api.open.cater.meituan.com/waimai/dish/deleteCat';
     const QUERY_PROPERTY_LIST_API = 'http://api.open.cater.meituan.com/waimai/dish/queryPropertyList';
+    const QUERY_BY_EDISH_CODES_API = 'http://api.open.cater.meituan.com/waimai/dish/queryListByEdishCodes';
 
     /**
      * 根据ERP的门店id查询门店下的菜品基础信息【包含美团的菜品Id】.
@@ -199,6 +200,18 @@ class Dish extends Api
     public function updateProperty($params)
     {
         return $this->request('post', [self::QUERY_PROPERTY_LIST_API, ['dishProperty' => $params]]);
+    }
+
+    /**
+     * 查询菜品信息
+     *
+     * @param $ePoiId
+     * @param $eDishCodes
+     * @return array
+     */
+    public function queryListByEdishCodes($ePoiId, $eDishCodes)
+    {
+        return $this->request('post', [self::QUERY_BY_EDISH_CODES_API, ['ePoiId' => $ePoiId, 'eDishCodes' => $eDishCodes]]);
     }
 
 }
