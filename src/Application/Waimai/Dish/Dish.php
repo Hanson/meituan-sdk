@@ -132,7 +132,7 @@ class Dish extends Api
      */
     public function updateCat($params)
     {
-        return $this->request('post', [self::UPDATE_STOCK_API, $params]);
+        return $this->request('post', [self::UPDATE_CAT_API, $params]);
     }
 
     /**
