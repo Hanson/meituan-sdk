@@ -67,7 +67,7 @@ class Dish extends Api
      */
     public function mapping($params)
     {
-        return $this->request('post', [self::QUERY_BY_POI_ID_API, $params]);
+        return $this->request('post', [self::MAPPING_API, $params]);
     }
 
     /**
