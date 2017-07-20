@@ -44,7 +44,7 @@ class AccessToken extends AbstractAccessToken
         ksort($params);
 
         foreach ($params as $key => $param) {
-            $result .= $key.$param;
+            $result .= $key.(is_array($param) ? json_encode($param, JSON_HEX_AMP) : $param);
         }
 
         return strtolower(sha1($result));
