@@ -21,6 +21,7 @@ class Dish extends Api
     const DELETE_SKU_API = 'http://api.open.cater.meituan.com/waimai/dish/deleteSku';
     const DELETE_CAT_API = 'http://api.open.cater.meituan.com/waimai/dish/deleteCat';
     const QUERY_PROPERTY_LIST_API = 'http://api.open.cater.meituan.com/waimai/dish/queryPropertyList';
+    const UPDATE_PROPETY_API = 'http://api.open.cater.meituan.com/waimai/dish/updateProperty';
     const QUERY_BY_EDISH_CODES_API = 'http://api.open.cater.meituan.com/waimai/dish/queryListByEdishCodes';
 
     /**
@@ -199,7 +200,7 @@ class Dish extends Api
      */
     public function updateProperty($params)
     {
-        return $this->request('post', [self::QUERY_PROPERTY_LIST_API, ['dishProperty' => $params]]);
+        return $this->request('post', [self::UPDATE_PROPETY_API, ['dishProperty' => $params]]);
     }
 
     /**
