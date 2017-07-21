@@ -37,14 +37,15 @@ class AccessToken extends AbstractAccessToken
      * @param $params
      * @return string
      */
-    public function signature($params)
+    public function signature(&$params)
     {
         $result = $this->getSignKey();
 
         ksort($params);
 
-        foreach ($params as $key => $param) {
-            $result .= $key.(is_array($param) ? json_encode($param, JSON_HEX_AMP) : $param);
+        foreach ($params as $key => &$param) {
+            $param = is_array($param) ? json_encode($param) : $param;
+            $result .= $key.$param;
         }
 
         return strtolower(sha1($result));
