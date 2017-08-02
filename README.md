@@ -9,7 +9,8 @@
 
 目前处于自用状态，需要了解可加QQ群 ：  570769430
 
-```
+```php
+
 $meituan = new Meituan([
     'developer_id' => '',
     'sign_key' => '',
