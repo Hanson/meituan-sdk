@@ -185,7 +185,7 @@ class Order extends Api
      */
     public function queryByEpoids($epoiIds)
     {
-        return $this->request('post', [self::REJECT_REFUND_API, ['epoiIds' => $epoiIds]]);
+        return $this->request('post', [self::QUERY_BY_EPOIDS_API, ['epoiIds' => $epoiIds]]);
     }
 
 
