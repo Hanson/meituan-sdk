@@ -22,6 +22,7 @@ class Order extends Api
     const AGREE_REFUND_API = 'http://api.open.cater.meituan.com/waimai/order/agreeRefund';
     const REJECT_REFUND_API = 'http://api.open.cater.meituan.com/waimai/order/rejectRefund';
     const QUERY_BY_EPOIDS_API = 'http://api.open.cater.meituan.com/waimai/order/queryByEpoids';
+    const BATCH_PULL_PHONE_NUMBER_API = 'http://api.open.cater.meituan.com/waimai/order/batchPullPhoneNumber';
 
     /**
      * 根据订单Id查询订单
@@ -188,5 +189,16 @@ class Order extends Api
         return $this->request('post', [self::QUERY_BY_EPOIDS_API, ['epoiIds' => $epoiIds]]);
     }
 
+    /**
+     * 隐私号-批量拉取手机号
+     *
+     * @param $offset
+     * @param int $limit
+     * @return array
+     */
+    public function batchPullPhoneNumber($offset, $limit = 1000)
+    {
+        return $this->request('post', [self::BATCH_PULL_PHONE_NUMBER_API, ['degradOffset' => $offset, 'degradLimit' => $limit]]);
+    }
 
 }
