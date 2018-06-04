@@ -77,6 +77,9 @@ $dish = $meituan->dish;
 // 门店实例
 $poi = $meituan->poi;
 
+// 团购券实例
+$coupon = $meituan->coupon;
+
 ```
 
 ### 具体API
