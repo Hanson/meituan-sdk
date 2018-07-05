@@ -36,10 +36,13 @@ class Api extends AbstractAPI
         $url = $params[0];
 
         $params = array_merge($params[1], [
-            'appAuthToken' => $this->accessToken->getAuthToken(),
             'charset' => 'UTF-8',
             'timestamp' => time(),
         ]);
+
+        $tokenArray = $this->accessToken->getAuthToken() ? ['appAuthToken' => $this->accessToken->getAuthToken()] : [];
+
+        $params = $tokenArray ? array_merge($params, $tokenArray) : $params;
 
         $params['sign'] = $this->accessToken->signature($params);
 

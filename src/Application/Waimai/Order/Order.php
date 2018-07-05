@@ -198,7 +198,7 @@ class Order extends Api
      */
     public function batchPullPhoneNumber($offset, $limit = 1000)
     {
-        return $this->request('post', [self::BATCH_PULL_PHONE_NUMBER_API, ['degradOffset' => $offset, 'degradLimit' => $limit]]);
+        return $this->request('post', [self::BATCH_PULL_PHONE_NUMBER_API, ['degradOffset' => $offset, 'degradLimit' => $limit, 'developerId' => $this->accessToken->getDeveloperId()]]);
     }
 
 }
