@@ -30,6 +30,24 @@ class Store extends Api
     }
 
     /**
+     * (新)门店映射接入
+     *
+     * @param $params
+     * @return string
+     */
+    public function getNewAuthorizeUrl($params)
+    {
+        $params = array_merge($params, [
+            'developerId' => $this->accessToken->getDeveloperId(),
+            'timestamp' => time(),
+        ]);
+
+        $params['sign'] = $this->accessToken->signature($params);
+
+        return self::STORE_MAP_API.'?'.http_build_query($params);
+    }
+
+    /**
      * 跳转至绑定页面.
      *
      * @param $params
@@ -66,6 +84,25 @@ class Store extends Api
             'appAuthToken' => $this->accessToken->getAuthToken(),
             'signKey' => $this->accessToken->getSignKey(),
         ];
+
+        return self::RELEASE_BINDING_API.'?'.http_build_query($params);
+    }
+
+    /**
+     * (新)获取解除绑定链接.
+     *
+     * @param $businessId
+     * @return string
+     */
+    public function getNewUnbindUrl($businessId)
+    {
+        $params = [
+            'businessId' => $businessId,
+            'appAuthToken' => $this->accessToken->getAuthToken(),
+            'timestamp' => time(),
+        ];
+
+        $params['sign'] = $this->accessToken->signature($params);
 
         return self::RELEASE_BINDING_API.'?'.http_build_query($params);
     }
