@@ -98,7 +98,6 @@ class Store extends Api
     {
         $params = [
             'businessId' => $businessId,
-            'appAuthToken' => $this->accessToken->getAuthToken(),
             'timestamp' => time(),
         ];
 
