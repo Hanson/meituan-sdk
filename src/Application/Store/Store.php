@@ -37,11 +37,8 @@ class Store extends Api
      */
     public function getNewAuthorizeUrl($params)
     {
-        $params['callbackUrl'] = urlencode($params['callbackUrl']);
-
         $params = array_merge($params, [
             'developerId' => $this->accessToken->getDeveloperId(),
-            'appAuthToken' => $this->accessToken->getAuthToken(),
             'timestamp' => time(),
         ]);
 
