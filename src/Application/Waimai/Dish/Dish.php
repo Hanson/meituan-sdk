@@ -7,22 +7,22 @@ use Hanson\Meituan\Core\Api;
 class Dish extends Api
 {
 
-    const QUERY_BASE_BY_POI_ID_API = 'http://api.open.cater.meituan.com/waimai/dish/queryBaseListByEPoiId';
+    const QUERY_BASE_BY_POI_ID_API = 'https://api.open.cater.meituan.com/waimai/dish/queryBaseListByEPoiId';
     const DISH_MAPPING_API = 'https://open-erp.meituan.com/waimai-dish-mapping';
-    const MAPPING_API = 'http://api.open.cater.meituan.com/waimai/dish/mapping';
-    const QUERY_BY_POI_ID_API = 'http://api.open.cater.meituan.com/waimai/dish/queryListByEPoiId';
-    const QUERY_CAT_LIST_API = 'http://api.open.cater.meituan.com/waimai/dish/queryCatList';
-    const BATCH_UPLOAD_API = 'http://api.open.cater.meituan.com/waimai/dish/batchUpload';
-    const UPDATE_PRICE_API = 'http://api.open.cater.meituan.com/waimai/dish/updatePrice';
-    const UPDATE_STOCK_API = 'http://api.open.cater.meituan.com/waimai/dish/updateStock';
-    const UPDATE_CAT_API = 'http://api.open.cater.meituan.com/waimai/dish/updateCat';
-    const UPLOAD_IMAGE_API = 'http://api.open.cater.meituan.com/waimai/image/upload';
-    const DELETE_API = 'http://api.open.cater.meituan.com/waimai/dish/delete';
-    const DELETE_SKU_API = 'http://api.open.cater.meituan.com/waimai/dish/deleteSku';
-    const DELETE_CAT_API = 'http://api.open.cater.meituan.com/waimai/dish/deleteCat';
-    const QUERY_PROPERTY_LIST_API = 'http://api.open.cater.meituan.com/waimai/dish/queryPropertyList';
-    const UPDATE_PROPETY_API = 'http://api.open.cater.meituan.com/waimai/dish/updateProperty';
-    const QUERY_BY_EDISH_CODES_API = 'http://api.open.cater.meituan.com/waimai/dish/queryListByEdishCodes';
+    const MAPPING_API = 'https://api.open.cater.meituan.com/waimai/dish/mapping';
+    const QUERY_BY_POI_ID_API = 'https://api.open.cater.meituan.com/waimai/dish/queryListByEPoiId';
+    const QUERY_CAT_LIST_API = 'https://api.open.cater.meituan.com/waimai/dish/queryCatList';
+    const BATCH_UPLOAD_API = 'https://api.open.cater.meituan.com/waimai/dish/batchUpload';
+    const UPDATE_PRICE_API = 'https://api.open.cater.meituan.com/waimai/dish/updatePrice';
+    const UPDATE_STOCK_API = 'https://api.open.cater.meituan.com/waimai/dish/updateStock';
+    const UPDATE_CAT_API = 'https://api.open.cater.meituan.com/waimai/dish/updateCat';
+    const UPLOAD_IMAGE_API = 'https://api.open.cater.meituan.com/waimai/image/upload';
+    const DELETE_API = 'https://api.open.cater.meituan.com/waimai/dish/delete';
+    const DELETE_SKU_API = 'https://api.open.cater.meituan.com/waimai/dish/deleteSku';
+    const DELETE_CAT_API = 'https://api.open.cater.meituan.com/waimai/dish/deleteCat';
+    const QUERY_PROPERTY_LIST_API = 'https://api.open.cater.meituan.com/waimai/dish/queryPropertyList';
+    const UPDATE_PROPETY_API = 'https://api.open.cater.meituan.com/waimai/dish/updateProperty';
+    const QUERY_BY_EDISH_CODES_API = 'https://api.open.cater.meituan.com/waimai/dish/queryListByEdishCodes';
 
     /**
      * 根据ERP的门店id查询门店下的菜品基础信息【包含美团的菜品Id】.

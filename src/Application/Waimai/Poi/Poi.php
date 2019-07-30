@@ -7,13 +7,13 @@ use Hanson\Meituan\Core\Api;
 class Poi extends Api
 {
 
-    const OPEN_API = 'http://api.open.cater.meituan.com/waimai/poi/open';
-    const CLOSE_API = 'http://api.open.cater.meituan.com/waimai/poi/close';
-    const UPDATE_OPEN_TIME_API = 'http://api.open.cater.meituan.com/waimai/poi/updateOpenTime';
-    const QUERY_DELAY_DISPATCH_API = 'http://api.open.cater.meituan.com/waimai/poi/queryDelayDispatch';
-    const UPDATE_DELAY_DISPATCH_API = 'http://api.open.cater.meituan.com/waimai/poi/updateDelayDispatch';
-    const QUERY_INFO_API = 'http://api.open.cater.meituan.com/waimai/poi/queryPoiInfo';
-    const QUERY_REVIEW_LIST_API = 'http://api.open.cater.meituan.com/waimai/poi/queryReviewList';
+    const OPEN_API = 'https://api.open.cater.meituan.com/waimai/poi/open';
+    const CLOSE_API = 'https://api.open.cater.meituan.com/waimai/poi/close';
+    const UPDATE_OPEN_TIME_API = 'https://api.open.cater.meituan.com/waimai/poi/updateOpenTime';
+    const QUERY_DELAY_DISPATCH_API = 'https://api.open.cater.meituan.com/waimai/poi/queryDelayDispatch';
+    const UPDATE_DELAY_DISPATCH_API = 'https://api.open.cater.meituan.com/waimai/poi/updateDelayDispatch';
+    const QUERY_INFO_API = 'https://api.open.cater.meituan.com/waimai/poi/queryPoiInfo';
+    const QUERY_REVIEW_LIST_API = 'https://api.open.cater.meituan.com/waimai/poi/queryReviewList';
 
     /**
      * 门店置营业
