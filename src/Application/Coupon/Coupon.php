@@ -3,21 +3,25 @@
 namespace Hanson\Meituan\Application\Coupon;
 
 
+use Hanson\Meituan\Application\Waimai\Dish\Dish;
+use Hanson\Meituan\Application\Waimai\Order\Order;
+use Hanson\Meituan\Application\Waimai\Poi\Poi;
+use Hanson\Meituan\Application\Waimai\Server\Server;
 use Hanson\Meituan\Core\Api;
 
 /**
  * Class Group
  * @package Hanson\Meituan\Application\Waimai
  *
- * @property \Hanson\Meituan\Application\Waimai\Dish\Dish      $dish
- * @property \Hanson\Meituan\Application\Waimai\Order\Order    $order
- * @property \Hanson\Meituan\Application\Waimai\Poi\Poi        $poi
- * @property \Hanson\Meituan\Application\Waimai\Server\Server  $server
+ * @property Dish      $dish
+ * @property Order    $order
+ * @property Poi        $poi
+ * @property Server  $server
  */
 class Coupon extends Api
 {
 
-    const API = 'https://api.open.cater.meituan.com/tuangou/coupon/';
+    const API = 'http://api.open.cater.meituan.com/tuangou/coupon/';
 
     /**
      * 已验券码查询

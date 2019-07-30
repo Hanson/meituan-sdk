@@ -7,22 +7,22 @@ use Hanson\Meituan\Core\Api;
 class Order extends Api
 {
 
-    const QUERY_BY_ID_API = 'https://api.open.cater.meituan.com/waimai/order/queryById';
-    const QUERY_BY_DAY_API = 'https://api.open.cater.meituan.com/waimai/order/queryByDaySeq';
-    const CONFIRM_API = 'https://api.open.cater.meituan.com/waimai/order/confirm';
-    const CANCEL_API = 'https://api.open.cater.meituan.com/waimai/order/cancel';
-    const DELIVERING_API = 'https://api.open.cater.meituan.com/waimai/order/delivering';
-    const DELIVERED_API = 'https://api.open.cater.meituan.com/waimai/order/delivered';
-    const QUERY_ZB_SHIPPING_FEE_API = 'https://api.open.cater.meituan.com/waimai/order/queryZbShippingFee';
-    const PREPARE_DISPATCH_API = 'https://api.open.cater.meituan.com/waimai/order/prepareZbDispatch';
-    const UPDATE_DISPATCH_TIP_API = 'https://api.open.cater.meituan.com/waimai/order/updateZbDispatchTip';
-    const CONFIRM_DISPATCH_API = 'https://api.open.cater.meituan.com/waimai/order/confirmZbDispatch';
-    const DISPATCH_SHIP_API = 'https://api.open.cater.meituan.com/waimai/order/dispatchShip';
-    const CANCEL_DISPATCH_API = 'https://api.open.cater.meituan.com/waimai/order/cancelDispatch';
-    const AGREE_REFUND_API = 'https://api.open.cater.meituan.com/waimai/order/agreeRefund';
-    const REJECT_REFUND_API = 'https://api.open.cater.meituan.com/waimai/order/rejectRefund';
-    const QUERY_BY_EPOIDS_API = 'https://api.open.cater.meituan.com/waimai/order/queryByEpoids';
-    const BATCH_PULL_PHONE_NUMBER_API = 'https://api.open.cater.meituan.com/waimai/order/batchPullPhoneNumber';
+    const QUERY_BY_ID_API = 'http://api.open.cater.meituan.com/waimai/order/queryById';
+    const QUERY_BY_DAY_API = 'http://api.open.cater.meituan.com/waimai/order/queryByDaySeq';
+    const CONFIRM_API = 'http://api.open.cater.meituan.com/waimai/order/confirm';
+    const CANCEL_API = 'http://api.open.cater.meituan.com/waimai/order/cancel';
+    const DELIVERING_API = 'http://api.open.cater.meituan.com/waimai/order/delivering';
+    const DELIVERED_API = 'http://api.open.cater.meituan.com/waimai/order/delivered';
+    const QUERY_ZB_SHIPPING_FEE_API = 'http://api.open.cater.meituan.com/waimai/order/queryZbShippingFee';
+    const PREPARE_DISPATCH_API = 'http://api.open.cater.meituan.com/waimai/order/prepareZbDispatch';
+    const UPDATE_DISPATCH_TIP_API = 'http://api.open.cater.meituan.com/waimai/order/updateZbDispatchTip';
+    const CONFIRM_DISPATCH_API = 'http://api.open.cater.meituan.com/waimai/order/confirmZbDispatch';
+    const DISPATCH_SHIP_API = 'http://api.open.cater.meituan.com/waimai/order/dispatchShip';
+    const CANCEL_DISPATCH_API = 'http://api.open.cater.meituan.com/waimai/order/cancelDispatch';
+    const AGREE_REFUND_API = 'http://api.open.cater.meituan.com/waimai/order/agreeRefund';
+    const REJECT_REFUND_API = 'http://api.open.cater.meituan.com/waimai/order/rejectRefund';
+    const QUERY_BY_EPOIDS_API = 'http://api.open.cater.meituan.com/waimai/order/queryByEpoids';
+    const BATCH_PULL_PHONE_NUMBER_API = 'http://api.open.cater.meituan.com/waimai/order/batchPullPhoneNumber';
 
     /**
      * 根据订单Id查询订单
