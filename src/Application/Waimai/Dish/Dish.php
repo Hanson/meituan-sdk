@@ -36,6 +36,27 @@ class Dish extends Api
     }
 
     /**
+     * 映射 UISDK URL
+     *
+     * @param int  $ePoiId
+     * @param int  $businessId
+     *
+     * @return string
+     */
+    public function uiSdkUrl($ePoiId, $businessId = 2)
+    {
+        $params = [
+            'developerId' => $this->accessToken->getDeveloperId(),
+            'ePoiId' => $ePoiId,
+            'businessId' => $businessId,
+            'timestamp' => str_pad(time(), 13, 0)
+        ];
+        $params['sign'] = $this->accessToken->signature($params);
+
+        return 'https://open-erp.meituan.com/storemap?'.http_build_query($params);
+    }
+
+    /**
      * 菜品映射链接.
      *
      * @param $ePoiId
