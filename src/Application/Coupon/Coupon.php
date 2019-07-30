@@ -21,7 +21,7 @@ use Hanson\Meituan\Core\Api;
 class Coupon extends Api
 {
 
-    const API = 'http://api.open.cater.meituan.com/tuangou/coupon/';
+    const API = 'https://api-open-cater.meituan.com/tuangou/coupon/';
 
     /**
      * 已验券码查询
