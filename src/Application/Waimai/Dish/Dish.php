@@ -64,11 +64,15 @@ class Dish extends Api
      */
     public function getDishMapUrl($ePoiId)
     {
-        return self::DISH_MAPPING_API . '?' . http_build_query([
-                'signKey'      => $this->accessToken->getSignKey(),
-                'appAuthToken' => $this->accessToken->getAuthToken(),
-                'ePoiId'       => $ePoiId,
-            ]);
+        $params = [
+            'ePoiId' => $ePoiId,
+            'appAuthToken' => $this->accessToken->getAuthToken(),
+            'timestamp' => time(),
+        ];
+
+        $params['sign'] = $this->accessToken->signature($params);
+
+        return self::DISH_MAPPING_API . '?' . http_build_query($params);
     }
 
     /**
